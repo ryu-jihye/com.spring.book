@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Getter //setter 없음(무분별하게 사용 시 목적과 의도 파악 불가)
 @NoArgsConstructor //기본 생성자 자동 추가(public Posts())
 @Entity //테이블과 링크될 클래스
-public class Posts {
+public class Posts extends BaseTimeEntity {
     @Id //PK
     @GeneratedValue(strategy = GenerationType.IDENTITY) //PK 생성 규칙(auto_increment 가능)
     private Long id;
